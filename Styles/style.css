@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 35rem;
+    font-family: 'Space Grotesk', sans-serif;}
+
+.card1{
+    position: absolute;
+    top: 225px;
+    left: 250px;
+}
+
+#circle {
+    position: relative;
+    bottom: 220px;
+    left: 35px;
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+#circle2 {
+    position: relative;
+    bottom: 263px;
+    left: 110px;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.cardNum input{
+    position: relative;
+    bottom: 190px;
+    left: 40px;
+    width: 85%;
+    letter-spacing: 2px;
+    border-style: none;
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+.nameUser input{
+    position: relative;
+    bottom: 170px;
+    left: 40px;
+    border-style: none;
+    color: white;
+    font-size: 0.8rem;
+    background-color: transparent;
+    background: transparent;
+
+}
+
+::placeholder {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+.card2{
+    position: absolute;
+    top: 520px;
+    left: 350px;
+}
+
+
+form{
+    position: absolute;
+    top: 325px;
+    left: 55%;
+    width: 400px;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.name label{
+    margin-bottom: 5px;  
+}
+
+.name input{
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, purple, orange) 1;
+
+}
+
+.formnumcard{
+    display: flex;
+    flex-direction: column;
+}
+
+.formnumcard label{
+    margin-bottom: 5px;  
+}
+
+.formnumcard input{
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, purple, orange) 1;
+}
+
+
+
+
+

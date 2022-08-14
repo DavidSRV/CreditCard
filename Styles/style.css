@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     background-image: url(/images/bg-main-desktop.png);
     background-repeat: no-repeat;
     background-size: 35rem;
-    font-family: 'Space Grotesk', sans-serif;}
+    font-family: 'Space Grotesk', sans-serif;
+}
 
-.card1{
+.card1 {
     position: absolute;
     top: 225px;
     left: 250px;
@@ -39,7 +40,7 @@ body{
     height: 20px;
 }
 
-.cardNum input{
+.cardNum input {
     position: relative;
     bottom: 190px;
     left: 40px;
@@ -50,7 +51,7 @@ body{
     background-color: transparent;
 }
 
-.nameUser input{
+.nameUser input {
     position: relative;
     bottom: 170px;
     left: 40px;
@@ -62,69 +63,124 @@ body{
 
 }
 
-::placeholder {
+.card1 ::placeholder {
     color: white;
 }
 
 
 
-
-
-
-
-
-
-.card2{
+.card2 {
     position: absolute;
     top: 520px;
     left: 350px;
 }
 
+.card2 .segurity {
+    position: relative;
+    bottom: 140px;
+    left: 210px;
+}
 
-form{
+.card2 input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: end;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.card2 ::placeholder {
+    color: white;
+}
+
+
+form {
     position: absolute;
     top: 325px;
     left: 55%;
     width: 400px;
 }
 
-.name{
+.name {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-.name label{
-    margin-bottom: 5px;  
+.name label {
+    margin-bottom: 5px;
 }
 
-.name input{
+.name input {
     font-size: 1.2rem;
-    padding: 8px;
-    border-radius: 20px;
-    border: 2px solid;
-    border-image: linear-gradient(45deg, purple, orange) 1;
-
+    padding: 10px;
+    border: 2px solid rgba(128, 128, 128, 0.427);
+    border-radius: 10px;
 }
 
-.formnumcard{
+.formnumcard {
     display: flex;
     flex-direction: column;
 }
 
-.formnumcard label{
-    margin-bottom: 5px;  
+.formnumcard label {
+    margin-bottom: 5px;
 }
 
-.formnumcard input{
+.formnumcard input {
     font-size: 1.2rem;
-    padding: 8px;
-    border-radius: 20px;
-    border: 2px solid;
-    border-image: linear-gradient(45deg, purple, orange) 1;
+    padding: 10px;
+    border: 2px solid rgba(128, 128, 128, 0.427);
+    border-radius: 10px;
 }
 
 
 
+.date {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
 
+.dateinputs {
+    display: flex;
+    flex-direction: row;
+}
+
+.date .datelabel {
+    margin-bottom: 5px;
+}
+
+.date label[for="date"] {
+    margin-right: 50px;
+}
+
+.date input {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 2px solid rgba(128, 128, 128, 0.427);
+    border-radius: 10px;
+    width: 45px;
+    margin-right: 10px;
+}
+
+.date input[name="space"] {
+    margin-right: 50px;
+}
+
+.date input[id="cvc"] {
+    width: 180px;
+}
+
+.inputconfirm {
+    width: 100%;
+    height: 50px;
+    margin: 40px 0;
+    border-radius: 10px;
+    background-color: #220a2f;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
 

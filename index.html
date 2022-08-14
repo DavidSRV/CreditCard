@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="Styles/style.css">
     <title>Credit-Card</title>
 </head>
+
 <body>
 
     <section class="card1">
@@ -26,6 +28,9 @@
 
     <section class="card2">
         <img src="./images/bg-card-back.png" alt="">
+        <div class="segurity">
+            <input type="number" name="" id="" placeholder="000" disabled>
+        </div>
     </section>
 
     <section class="form">
@@ -34,13 +39,33 @@
 
             <div class="name">
                 <label for="name">CARDHOLDER NAME</label>
-                <input id="name" type="text" name="name">
+                <input id="name" type="text" name="name" placeholder="e.g Jane Applessed" required>
             </div>
 
             <div class="formnumcard">
                 <label for="name">CARD NUMBER</label>
-                <input id="name" type="text" name="name">
+                <input id="name" type="text" name="name" placeholder="e.g. 1234 1234 1234 1234" required>
             </div>
+
+            <div class="date">
+
+                <div class="datelabel">
+                    <label for="date">EXP, DATE (MM/YY)</label>
+                    <label for="cvc">CVC</label>
+                </div>
+
+                <div class="dateinputs">
+
+                    <input id="date" type="text" placeholder="MM" required>
+
+                    <input id="date" name="space" type="text" placeholder="YY" required>
+
+                    <input id="cvc" type="text" placeholder="e.g 123" required>
+                </div>
+
+            </div>
+
+            <button class="inputconfirm" type="submit">Confirm</button>
 
         </form>
 
@@ -54,4 +79,5 @@
 
 
 </body>
+
 </html>

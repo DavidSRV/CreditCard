@@ -49,6 +49,8 @@ body {
     border-style: none;
     font-size: 2rem;
     background-color: transparent;
+    color: white;
+    text-align: end;
 }
 
 .nameUser input {
@@ -57,9 +59,10 @@ body {
     left: 40px;
     border-style: none;
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.8rem;  
     background-color: transparent;
     background: transparent;
+    width: 100%;
 
 }
 
@@ -96,7 +99,7 @@ body {
 
 
 form {
-    position: absolute;
+    position: relative  ;
     top: 325px;
     left: 55%;
     width: 400px;
@@ -134,8 +137,6 @@ form {
     border: 2px solid rgba(128, 128, 128, 0.427);
     border-radius: 10px;
 }
-
-
 
 .date {
     display: flex;

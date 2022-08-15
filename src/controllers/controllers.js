@@ -9,14 +9,19 @@ const cvc = document.getElementById("cvc");
 const cardCvc = document.getElementById("cardCvc")
 
 
-submit.addEventListener("click",()=>{
+
+submit.addEventListener("mouseover",(cancel)=>{
+
+    cancel.preventDefault();
 
     window.addEventListener("submit",()=>{
+    
         cardNum.value = number.value;
         cardUser.value = user.value;
         cardCvc.value = cvc.value;
-        
+
     })
+
 })
 
 

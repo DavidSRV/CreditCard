@@ -186,5 +186,9 @@ form {
 }
 
 input:focus{
-    outline-color: purple;
+    outline:2px solid rgb(201, 14, 201);
 }
+
+/* input:focus:required:invalid{
+    border: 1px solid red;
+} */

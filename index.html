@@ -42,7 +42,7 @@
 
     <section class="form">
 
-        <form action="#">
+        <form id="form" action="#" onsubmit="return cancelar();">
 
             <div class="name">
 
@@ -52,7 +52,7 @@
 
             <div class="formnumcard">
                 <label for="number">CARD NUMBER</label>
-                <input id="number" type="text" name="number" placeholder="e.g. 1234 1234 1234 1234" required>
+                <input id="number" type="text" name="number" placeholder="e.g. 1234 1234 1234 1234" required pattern="[0-9]+">
             </div>
 
             <div class="date">
@@ -74,7 +74,7 @@
 
             </div>
 
-            <button id="submit" class="inputconfirm" type="submit">Confirm</button>
+            <button id="button" class="inputconfirm" type="submit">Confirm</button>
 
         </form>
 

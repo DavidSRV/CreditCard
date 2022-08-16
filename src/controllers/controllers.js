@@ -2,26 +2,34 @@
 
 const user = document.getElementById("user");
 const number = document.getElementById("number");
-const cardNum = document.getElementById("cardNum");        
+const cardNum = document.getElementById("cardNum");
 const cardUser = document.getElementById("cardUser");
-const submit = document.getElementById("submit");
+const button = document.getElementById("button");
 const cvc = document.getElementById("cvc");
 const cardCvc = document.getElementById("cardCvc")
+const form = document.getElementById("form")
 
 
+function cancelar() {
+    let dato = form[0];
 
-submit.addEventListener("mouseover",(cancel)=>{
+    if (dato.value === "cancelar") {
+        return true;
+    } else {
+        
+            
 
-    cancel.preventDefault();
+        button.addEventListener("click", () => {
+        
+            cardNum.value = number.value;
+            cardUser.value = user.value;
+            cardCvc.value = cvc.value;
+            
+        })
+        return false;
+    }
 
-    window.addEventListener("submit",()=>{
-    
-        cardNum.value = number.value;
-        cardUser.value = user.value;
-        cardCvc.value = cvc.value;
+}
 
-    })
-
-})
 
 

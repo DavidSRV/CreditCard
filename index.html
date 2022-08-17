@@ -18,7 +18,7 @@
         <div id="circle"></div>
 
         <div id="circle2"></div>
-        
+
         <div class="cardNum">
             <input id="cardNum" type="number" placeholder="0000 0000 0000 0000" disabled>
         </div>
@@ -32,7 +32,7 @@
     <section class="card2">
 
         <img src="./Assets/images/bg-card-back.png" alt="">
-        
+
         <div class="segurity">
 
             <input type="number" name="" id="cardCvc" placeholder="000" disabled>
@@ -47,12 +47,14 @@
             <div class="name">
 
                 <label for="name">CARDHOLDER NAME</label>
-                <input id="user" type="text" name="name" placeholder="e.g Jane Applessed" required maxlength="35">
+                <input id="user" type="text" name="name" placeholder="e.g Jane Applessed" maxlength="35">
+                <span id="alertuser" class="alert"></span>
             </div>
 
             <div class="formnumcard">
                 <label for="number">CARD NUMBER</label>
-                <input id="number" type="text" name="number" placeholder="e.g. 1234 1234 1234 1234" required pattern="[0-9]+">
+                <input id="number" type="text" name="number" placeholder="e.g. 1234 1234 1234 1234" maxlength="16">
+                <span id="alertnumber" class="alert">hola</span>
             </div>
 
             <div class="date">
@@ -64,12 +66,16 @@
 
                 <div class="dateinputs">
 
-                    <input id="date" type="text" placeholder="MM" required minlength="2" maxlength="2">
+                    <input id="date" type="text" placeholder="MM" minlength="2" maxlength="2">
 
-                    <input id="date" name="space" type="text" placeholder="YY" required minlength="2" maxlength="2">
+                    <input id="date" name="space" type="text" placeholder="YY" minlength="2" maxlength="2">
 
-                    <input id="cvc" type="text" placeholder="e.g 123" required maxlength="3" minlength="3">
+                    <input id="cvc" type="text" placeholder="e.g 123" maxlength="3" minlength="3" required>
+                </div>
 
+                <div>
+                    <span id="alertdate" class="alert">hola</span>
+                    <span id="alertcvc" class="alert">hola</span>
                 </div>
 
             </div>

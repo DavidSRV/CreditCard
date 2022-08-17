@@ -189,6 +189,10 @@ input:focus{
     outline:2px solid rgb(201, 14, 201);
 }
 
-/* input:focus:required:invalid{
-    border: 1px solid red;
-} */
+.alert{
+    height: 0;
+    position: relative;
+    top: 3px;
+    color: red;
+
+}

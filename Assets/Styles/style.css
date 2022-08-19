@@ -66,6 +66,18 @@ body {
 
 }
 
+.Date input{
+    position: relative;
+    bottom: 190px;
+    left: 380px;
+    border-style: none;
+    color: white;
+    font-size: 0.8rem;  
+    background-color: transparent;
+    background: transparent;
+    width: 100%;
+}
+
 .card1 ::placeholder {
     color: white;
 }

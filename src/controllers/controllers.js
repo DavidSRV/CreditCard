@@ -1,52 +1,69 @@
-// INPUTS
-let user = document.getElementById("user");
-let number = document.getElementById("number");
-let cardNum = document.getElementById("cardNum");
-let cardUser = document.getElementById("cardUser");
-let button = document.getElementById("button");
-let cvc = document.getElementById("cvc");
-let cardCvc = document.getElementById("cardCvc");
-let form = document.getElementById("form");
-
-//ALERTAS SPAN
-let alertuser = document.getElementById("alertuser")
-let alertnumber = document.getElementById("alertnumber");
-let alertdate = document.getElementById("alertdate");
-let alertcvc = document.getElementById("alertcvc");
+const formulario = document.getElementById('form');
+const inputs = document.querySelectorAll('#form input')
 
 
 //REGEX
-let validuser = /^(?!.* $)[A-Z][a-z ]+$||^(?!.* $)[A-Z][a-z ]+$/;
-// let validnumber = ;
-// let validdateday = ;
-// let validdatemonth = ;
-// let validcvc = ;
-
-
-
-
-
-
-
-function cancelar() {
-    let dato = form[0];
-
-    if (dato.value === "cancelar") {
-        return true;
-
-    } else {
-
-        button.addEventListener("click", () => {
-
-            cardNum.value = number.value;
-            cardUser.value = user.value;
-            cardCvc.value = cvc.value;
-
-        })
-        return false;
-    }
-
+const expresiones = {
+	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	number: /^\d{16,16}$/, 
+    date: /^\d{2}$/,
+    cvc: /^\d{3}$/
 }
 
+const validarFomulario = (e) => {
+    switch (e.target.name){
+
+        case 'user':
+            validarCampo(expresiones.name, e.target, "user", "alertuser", "cardUser");
+
+        break;
+
+        case 'number':
+            validarCampo(expresiones.number, e.target, "number", "alertnumber", "cardNum");
+
+        break;
+
+        case 'date':
+            validarCampo(expresiones.date, e.target, "date", "alertdate");
+
+        break;
+
+        case 'cvc':
+            validarCampo(expresiones.cvc, e.target, "cvc", "alertcvc");
+            
+        break;
+    }
+}
+
+const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta) =>{
+
+    if(expresiones.test(input.value)){
+
+        document.getElementById(campo).classList.remove('input-incorrecto')
+
+        document.getElementById(campoverificado).classList.replace('alert-on','alert');
+
+        document.getElementById(copiaTarjeta).value = input.value
+        
+     } else {
+        document.getElementById(campo).classList.add('input-incorrecto');
+
+        document.getElementById(campoverificado).classList.replace('alert','alert-on');
+
+        document.getElementById(copiaTarjeta).value = input.value
+
+
+    }
+}
+
+inputs.forEach((input)=> {
+    input.addEventListener('keyup',validarFomulario);
+
+    input.addEventListener('blur',validarFomulario);
+});
+
+formulario.addEventListener('submit',(e)=>{
+    e.preventDefault();
+});
 
 

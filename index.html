@@ -42,40 +42,42 @@
 
     <section class="form">
 
-        <form id="form" action="#" onsubmit="return cancelar();">
+        <form id="form" action="#">
 
             <div class="name">
 
-                <label for="name">CARDHOLDER NAME</label>
-                <input id="user" type="text" name="name" placeholder="e.g Jane Applessed" maxlength="35">
-                <span id="alertuser" class="alert"></span>
+                <label for="user">CARDHOLDER NAME</label>
+                <input id="user" type="text" name="user" placeholder="e.g Jane Applessed" maxlength="35" novalid>
+                <span id="alertuser" class="alert">Only letters and no more than 30 words, Pls Bro!!</span>
             </div>
 
             <div class="formnumcard">
                 <label for="number">CARD NUMBER</label>
                 <input id="number" type="text" name="number" placeholder="e.g. 1234 1234 1234 1234" maxlength="16">
-                <span id="alertnumber" class="alert">hola</span>
+                <span id="alertnumber" class="alert">
+                    Only numbers. Altogether 16</span>
             </div>
 
             <div class="date">
 
                 <div class="datelabel">
                     <label for="date">EXP, DATE (MM/YY)</label>
+
                     <label for="cvc">CVC</label>
                 </div>
 
                 <div class="dateinputs">
 
-                    <input id="date" type="text" placeholder="MM" minlength="2" maxlength="2">
+                    <input id="date" name="date" type="text" placeholder="MM" minlength="2" maxlength="2">
 
-                    <input id="date" name="space" type="text" placeholder="YY" minlength="2" maxlength="2">
+                    <input id="date" name="date" type="text" placeholder="YY" minlength="2" maxlength="2">
 
-                    <input id="cvc" type="text" placeholder="e.g 123" maxlength="3" minlength="3" required>
+                    <input id="cvc" type="text" name="cvc" placeholder="e.g 123" maxlength="3" minlength="3">
                 </div>
 
                 <div>
-                    <span id="alertdate" class="alert">hola</span>
-                    <span id="alertcvc" class="alert">hola</span>
+                    <span id="alertdate" class="alert">Only numbers, month up to 12,days 30 and cvc 3</span>
+                    <span id="alertcvc" class="alert">Only numbers,</span>
                 </div>
 
             </div>

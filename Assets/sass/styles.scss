@@ -1,0 +1,73 @@
+@use 'layouts';
+@use 'base';
+@use 'components';
+
+$white: white;
+$black: black;
+
+.card1 {
+
+    @include layouts.card(225px, 250px);
+
+    & ::placeholder {
+        color: $white;
+    }
+
+    & .cardNum {
+
+        & input {
+            @include components.inputs(190px, 40px, 85%);
+            font-size: 2rem;
+            letter-spacing: 2px;
+            text-align: end;
+        }
+    }
+
+    & .nameUser input {
+        @include components.inputs(170px, 40px);
+        font-size: 0.8rem;
+        background: transparent;
+
+    }
+
+    & .Date input {
+        @include components.inputs(190px, 380px);
+        background: transparent;
+
+    }
+}
+
+.card2 {
+
+    @include layouts.card(520px, 350px);
+
+    & ::placeholder{
+        color: $white;
+    }
+
+    & .segurity {
+        position: relative;
+        bottom: 140px;
+        left: 210px;
+
+        & input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            text-align: end;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+    }
+}
+
+#circle {
+    @include layouts.circle(220px, 35px, 60px, 60px);
+    background: $white;
+}
+
+#circle2 {
+    @include layouts.circle(263px, 110px, 20px, 20px);
+    border: 1px solid $white;
+}

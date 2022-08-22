@@ -1,0 +1,15 @@
+@mixin circle ($bottom, $left, $width: 60px, $height: 60px){
+    position: relative;
+    bottom: $bottom;
+    left: $left;
+    border-radius: 50%;
+    width:  $width;
+    height: $height;
+}
+
+@mixin card ($top, $left){
+    position: absolute;
+    top: $top;
+    left: $left;
+    
+}

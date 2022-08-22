@@ -1,0 +1,9 @@
+@mixin inputs ($bottom, $left, $width:100%, ){
+    position: relative;
+    bottom: $bottom;
+    left:  $left;
+    width: $width;
+    border-style: none;
+    color: white;
+    background-color: transparent;
+}

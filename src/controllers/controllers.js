@@ -29,28 +29,33 @@ const validarFomulario = (e) => {
         break;
 
         case 'cvc':
-            validarCampo(expresiones.cvc, e.target, "cvc", "alertcvc");
+            validarCampo(expresiones.cvc, e.target, "cvc", "alertcvc", "cardCvc");
             
         break;
     }
 }
 
-const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta) =>{
+const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta, copiarcvc) =>{
 
     if(expresiones.test(input.value)){
 
-        document.getElementById(campo).classList.remove('input-incorrecto')
+        document.getElementById(campo).classList.remove('input-incorrecto');
 
         document.getElementById(campoverificado).classList.replace('alert-on','alert');
 
-        document.getElementById(copiaTarjeta).value = input.value
+        document.getElementById(copiaTarjeta).value = input.value;
+
+        document.getElementById(copiarcvc).value = input.value;
         
      } else {
         document.getElementById(campo).classList.add('input-incorrecto');
 
         document.getElementById(campoverificado).classList.replace('alert','alert-on');
 
-        document.getElementById(copiaTarjeta).value = input.value
+        document.getElementById(copiaTarjeta).value = input.value;
+
+        document.getElementById(copiarcvc).value = input.value;
+
 
 
     }

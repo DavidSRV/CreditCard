@@ -11,5 +11,16 @@
     position: absolute;
     top: $top;
     left: $left;
-    
+}
+
+@mixin flex-form ($direction: column){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin alert($on: none){
+    display: $on;
+    height: 0;
+    position: relative;
+    top: 3px;
 }

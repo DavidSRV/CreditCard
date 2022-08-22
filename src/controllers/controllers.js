@@ -24,7 +24,12 @@ const validarFomulario = (e) => {
         break;
 
         case 'date':
-            validarCampo(expresiones.date, e.target, "date", "alertdate");
+            validarCampo(expresiones.date, e.target, "date", "alertcvc");
+
+        break;
+
+        case 'date1':
+            validarCampo(expresiones.date, e.target, "date1", "alertcvc");
 
         break;
 
@@ -48,6 +53,7 @@ const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta, 
         document.getElementById(copiarcvc).value = input.value;
         
      } else {
+
         document.getElementById(campo).classList.add('input-incorrecto');
 
         document.getElementById(campoverificado).classList.replace('alert','alert-on');

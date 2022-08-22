@@ -12,7 +12,6 @@ body {
   background-image: url(/Assets/images/bg-main-desktop.png);
   background-repeat: no-repeat;
   background-size: 35rem;
-  background-color: rgba(0, 0, 0, 0.867);
 }
 
 .card1 {
@@ -97,6 +96,102 @@ body {
   width: 20px;
   height: 20px;
   border: 1px solid white;
+}
+
+form {
+  position: relative;
+  top: 325px;
+  left: 55%;
+  width: 400px;
+}
+form input:focus {
+  outline: 2px solid rgb(201, 14, 201);
+}
+form .input-incorrecto:focus {
+  outline: 2px solid rgb(243, 51, 57);
+}
+form .alert {
+  display: none;
+  height: 0;
+  position: relative;
+  top: 3px;
+  color: rgb(225, 42, 48);
+}
+form .alert-on {
+  display: block;
+  height: 0;
+  position: relative;
+  top: 3px;
+  color: rgb(225, 42, 48);
+}
+form .name {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+form .name label {
+  margin-bottom: 5px;
+}
+form .name input {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.427);
+  border-radius: 10px;
+}
+form .formnumcard {
+  display: flex;
+  flex-direction: column;
+}
+form .formnumcard label {
+  margin-bottom: 5px;
+}
+form .formnumcard input {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.427);
+  border-radius: 10px;
+}
+form .date {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+form .date .dateinputs {
+  display: flex;
+  flex-direction: row;
+}
+form .date .datelabel {
+  margin-bottom: 5px;
+}
+form .date .datelabel label[for=date] {
+  margin-right: 15px;
+}
+form .date input {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.427);
+  border-radius: 10px;
+  width: 70px;
+  margin-right: 10px;
+}
+form .date input[name=space] {
+  margin-right: 50px;
+}
+form .date input[id=cvc] {
+  width: 240px;
+}
+form .date label {
+  position: relative;
+}
+form .inputconfirm {
+  width: 100%;
+  height: 50px;
+  margin: 40px 0;
+  border-radius: 10px;
+  background-color: #220a2f;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 
 /*# sourceMappingURL=styles.css.map */

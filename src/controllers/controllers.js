@@ -5,7 +5,7 @@ const inputs = document.querySelectorAll('#form input')
 //REGEX
 const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-	number: /^\d{16,16}$/, 
+	number: /^\d{16,16}$/,
     date: /^\d{2}$/,
     cvc: /^\d{3}$/
 }

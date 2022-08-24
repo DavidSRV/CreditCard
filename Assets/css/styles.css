@@ -13,6 +13,14 @@ body {
   background-repeat: no-repeat;
   background-size: 35rem;
 }
+@media (max-width: 1020px) {
+  body {
+    position: absolute;
+    background-image: url(/Assets/images/bg-main-mobile.png);
+    background-size: 800px;
+    background-position-x: center;
+  }
+}
 
 .card1 {
   position: absolute;
@@ -55,6 +63,21 @@ body {
   background-color: transparent;
   background: transparent;
 }
+@media (max-width: 1270px) {
+  .card1 {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    z-index: 1;
+  }
+}
+@media (max-width: 1270px) and (min-width: 1000px) {
+  .card1 {
+    position: absolute;
+    top: 225px;
+    left: 100px;
+  }
+}
 
 .card2 {
   position: absolute;
@@ -76,6 +99,20 @@ body {
   text-align: end;
   font-size: 1rem;
   letter-spacing: 2px;
+}
+@media (max-width: 1450px) {
+  .card2 {
+    position: absolute;
+    top: 520px;
+    left: 100px;
+  }
+}
+@media (max-width: 1450px) and (max-width: 1000px) {
+  .card2 {
+    position: absolute;
+    top: 22px;
+    left: 100px;
+  }
 }
 
 #circle {
@@ -99,10 +136,17 @@ body {
 }
 
 form {
-  position: relative;
+  position: absolute;
   top: 325px;
   left: 55%;
   width: 400px;
+}
+@media (max-width: 1000px) {
+  form {
+    position: absolute;
+    top: 450px;
+    left: 100px;
+  }
 }
 form input:focus {
   outline: 2px solid rgb(201, 14, 201);

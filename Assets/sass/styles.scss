@@ -38,6 +38,20 @@ $alert: rgb(225, 42, 48);
         background: transparent;
 
     }
+
+    @media (max-width: 1270px) {
+        & {
+            @include layouts.card(160px, 20px);
+            z-index: 1;
+
+            @media (min-width: 1000px) {
+                & {
+                    @include layouts.card(225px, 100px);
+                }
+            }
+        }
+    }
+
 }
 
 .card2 {
@@ -63,6 +77,20 @@ $alert: rgb(225, 42, 48);
         }
 
     }
+
+    @media (max-width: 1450px) {
+        & {
+            @include layouts.card(520px, 100px);
+
+            @media (max-width: 1000px) {
+                & {
+                    @include layouts.card(22px, 100px);
+                }
+            }
+        }
+
+    }
+
 }
 
 #circle {
@@ -76,10 +104,16 @@ $alert: rgb(225, 42, 48);
 }
 
 form {
-    position: relative;
+    position: absolute;
     top: 325px;
     left: 55%;
     width: 400px;
+
+    @media (max-width: 1000px) {
+        & {
+            @include layouts.card(450px, 100px);
+        }
+    }
 
     & input:focus {
         outline: 2px solid $focus-inputs;

@@ -10,6 +10,14 @@ const expresiones = {
     cvc: /^\d{3}$/
 }
 
+const campos = {
+    user: false,
+    number: false,
+    date: false,
+    date1: false,
+    cvc: false,
+}
+
 const validarFomulario = (e) => {
     switch (e.target.name){
 
@@ -37,10 +45,11 @@ const validarFomulario = (e) => {
             validarCampo(expresiones.cvc, e.target, "cvc", "alertcvc", "cardCvc");
             
         break;
+
     }
 }
 
-const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta, copiarcvc) =>{
+const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta, copiarcvc) => {
 
     if(expresiones.test(input.value)){
 
@@ -48,15 +57,20 @@ const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta, 
 
         document.getElementById(campoverificado).classList.replace('alert-on','alert');
 
+        campos[campo] = true;
+
         document.getElementById(copiaTarjeta).value = input.value;
 
         document.getElementById(copiarcvc).value = input.value;
+
         
      } else {
 
         document.getElementById(campo).classList.add('input-incorrecto');
 
         document.getElementById(campoverificado).classList.replace('alert','alert-on');
+
+        campos[campo] = false;
 
         document.getElementById(copiaTarjeta).value = input.value;
 
@@ -75,6 +89,18 @@ inputs.forEach((input)=> {
 
 formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
+
+    if(campos.user && campos.date && campos.cvc && campos.number && campos.date1){
+        formulario.reset();
+
+        
+    }else{
+        document.getElementById('btnconfirm').classList.replace('alert','alert-in-input');
+
+
+    }
+
+
 });
 
 

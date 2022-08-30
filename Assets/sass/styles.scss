@@ -132,8 +132,16 @@ form {
     & .alert-on {
         @include layouts.alert(block);
         color: $alert;
-
     }
+
+    & .alert-in-input{
+        color: $alert;
+        display: block;
+        text-align: center;
+        margin-top: -30px;
+        font-size: 1.5rem;
+    }
+
 
     & .name {
 
@@ -207,6 +215,7 @@ form {
         color: $white;
         font-size: 1rem;
         letter-spacing: 2px;
+        cursor: pointer;
     }
 
 

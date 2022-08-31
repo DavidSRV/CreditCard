@@ -4,9 +4,11 @@
 
 $white: white;
 $black: black;
+$grey: grey;
 $focus-inputs: rgb(201, 14, 201);
 $incorrect: rgb(243, 51, 57);
 $alert: rgb(225, 42, 48);
+$input: #220a2f;
 
 .card1 {
 
@@ -104,10 +106,12 @@ $alert: rgb(225, 42, 48);
 }
 
 form {
+
     position: absolute;
     top: 325px;
-    left: 55%;
+    left: 60%;
     width: 400px;
+    display: block;
 
     @media (max-width: 1000px) {
         & {
@@ -211,12 +215,58 @@ form {
         height: 50px;
         margin: 40px 0;
         border-radius: 10px;
-        background-color: #220a2f;
+        background-color: $input;
         color: $white;
         font-size: 1rem;
         letter-spacing: 2px;
         cursor: pointer;
     }
+
+}
+
+.confirm{
+
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    width: 400px;
+    height: 500px;
+    display: none;
+
+    & img{
+        position: relative;
+        bottom: 120px;
+        left: 150px;
+    }
+
+    & h1{
+        position: relative;
+        bottom: 90px;
+        left: 80px;
+        letter-spacing: 6px;
+        font-size: 2rem;
+    }
+
+    & p{
+        color: $grey;
+        position: relative;
+        bottom: 70px;
+        left: 60px;
+        letter-spacing: 1.5px
+        
+    }
+
+    & button{
+        @include components.input-form();
+        width: 400px;
+        position: relative;
+        bottom: 20px;
+        color: $white;
+        background-color: $input;
+        cursor: pointer;
+        
+    }
+
 
 
 }

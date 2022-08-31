@@ -91,10 +91,14 @@ formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
 
     if(campos.user && campos.date && campos.cvc && campos.number && campos.date1){
-        formulario.reset();
-
         
+        document.getElementById("form").style.display = "none";
+        document.getElementById("confirm1").style.display = "block";
+
+
     }else{
+
+
         document.getElementById('btnconfirm').classList.replace('alert','alert-in-input');
 
 

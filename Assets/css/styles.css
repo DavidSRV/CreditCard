@@ -138,8 +138,9 @@ body {
 form {
   position: absolute;
   top: 325px;
-  left: 55%;
+  left: 60%;
   width: 400px;
+  display: block;
 }
 @media (max-width: 1000px) {
   form {
@@ -243,6 +244,46 @@ form .inputconfirm {
   color: white;
   font-size: 1rem;
   letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.confirm {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  width: 400px;
+  height: 500px;
+  display: none;
+}
+.confirm img {
+  position: relative;
+  bottom: 120px;
+  left: 150px;
+}
+.confirm h1 {
+  position: relative;
+  bottom: 90px;
+  left: 80px;
+  letter-spacing: 6px;
+  font-size: 2rem;
+}
+.confirm p {
+  color: grey;
+  position: relative;
+  bottom: 70px;
+  left: 60px;
+  letter-spacing: 1.5px;
+}
+.confirm button {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.427);
+  border-radius: 10px;
+  width: 400px;
+  position: relative;
+  bottom: 20px;
+  color: white;
+  background-color: #220a2f;
   cursor: pointer;
 }
 

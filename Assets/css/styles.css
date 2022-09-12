@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -15,10 +20,10 @@ body {
 }
 @media (max-width: 1020px) {
   body {
-    position: absolute;
-    background-image: url(/Assets/images/bg-main-mobile.png);
-    background-size: 800px;
-    background-position-x: center;
+    margin: 0 auto;
+    background-image: url(../images/bg-main-mobile.png);
+    background-size: 500px;
+    background-repeat: repeat-x;
   }
 }
 
@@ -26,24 +31,30 @@ body {
   position: absolute;
   top: 225px;
   left: 250px;
+  height: 250px;
+  min-width: 250px;
 }
 .card1 ::placeholder {
   color: white;
 }
+.card1 img {
+  width: 30rem;
+}
 .card1 .cardNum input {
-  position: relative;
-  bottom: 190px;
-  left: 40px;
+  position: absolute;
+  bottom: 80px;
+  left: 10px;
   width: 85%;
   border-style: none;
   color: white;
   background-color: transparent;
+  width: max-content;
   font-size: 2rem;
   letter-spacing: 2px;
   text-align: end;
 }
 .card1 .nameUser input {
-  position: relative;
+  position: absolute;
   bottom: 170px;
   left: 40px;
   width: 100%;
@@ -52,18 +63,20 @@ body {
   background-color: transparent;
   font-size: 0.8rem;
   background: transparent;
+  width: 1px;
 }
 .card1 .Date input {
-  position: relative;
-  bottom: 190px;
-  left: 380px;
-  width: 100%;
-  border-style: none;
-  color: white;
-  background-color: transparent;
+  position: absolute;
+  top: 200px;
+  left: 360px;
+  width: 50px;
   background: transparent;
+  border: none;
 }
 @media (max-width: 1270px) {
+  .card1 img {
+    width: 25rem;
+  }
   .card1 {
     position: absolute;
     top: 160px;
@@ -88,8 +101,8 @@ body {
   color: white;
 }
 .card2 .segurity {
-  position: relative;
-  bottom: 140px;
+  position: absolute;
+  bottom: 120px;
   left: 210px;
 }
 .card2 .segurity input {
@@ -117,21 +130,21 @@ body {
 
 #circle {
   position: relative;
-  bottom: 220px;
-  left: 35px;
+  bottom: 13.75rem;
+  left: 2.188rem;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   background: white;
 }
 
 #circle2 {
   position: relative;
-  bottom: 263px;
-  left: 110px;
+  bottom: 16.438rem;
+  left: 6.875rem;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   border: 1px solid white;
 }
 
@@ -144,9 +157,11 @@ form {
 }
 @media (max-width: 1000px) {
   form {
+    margin: 0 auto;
     position: absolute;
-    top: 450px;
-    left: 100px;
+    top: 50%;
+    margin-left: 10px;
+    left: 10%;
   }
 }
 form input:focus {
@@ -252,8 +267,17 @@ form .inputconfirm {
   left: 60%;
   top: 50%;
   width: 400px;
-  height: 500px;
+  height: 200px;
   display: none;
+}
+@media (max-width: 1000px) {
+  .confirm {
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    margin-left: 10px;
+    left: 10%;
+  }
 }
 .confirm img {
   position: relative;

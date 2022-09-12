@@ -1,7 +1,6 @@
 const formulario = document.getElementById('form');
 const inputs = document.querySelectorAll('#form input')
 
-
 //REGEX
 const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -63,7 +62,6 @@ const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta, 
 
         document.getElementById(copiarcvc).value = input.value;
 
-        
      } else {
 
         document.getElementById(campo).classList.add('input-incorrecto');
@@ -75,8 +73,6 @@ const validarCampo = (expresiones, input, campo, campoverificado, copiaTarjeta, 
         document.getElementById(copiaTarjeta).value = input.value;
 
         document.getElementById(copiarcvc).value = input.value;
-
-
 
     }
 }
@@ -95,13 +91,9 @@ formulario.addEventListener('submit',(e)=>{
         document.getElementById("form").style.display = "none";
         document.getElementById("confirm1").style.display = "block";
 
-
     }else{
 
-
         document.getElementById('btnconfirm').classList.replace('alert','alert-in-input');
-
-
     }
 
 

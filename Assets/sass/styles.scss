@@ -13,15 +13,22 @@ $input: #220a2f;
 .card1 {
 
     @include layouts.card(225px, 250px);
+    height: 250px;
+    min-width: 250px;
 
     & ::placeholder {
         color: $white;
     }
 
+    & img{
+        width: 30rem
+    }
+
     & .cardNum {
 
         & input {
-            @include components.inputs(190px, 40px, 85%);
+            @include components.inputs(80px, 10px, 85%);
+            width: max-content;
             font-size: 2rem;
             letter-spacing: 2px;
             text-align: end;
@@ -32,16 +39,27 @@ $input: #220a2f;
         @include components.inputs(170px, 40px);
         font-size: 0.8rem;
         background: transparent;
+        width: 1px;
 
     }
 
     & .Date input {
-        @include components.inputs(190px, 380px);
+        position: absolute;
+        top: 200px;
+        left: 360px;
+        width: 50px;
         background: transparent;
+        border: none;
 
     }
 
     @media (max-width: 1270px) {
+
+
+        & img{
+            width: 25rem
+        }
+
         & {
             @include layouts.card(160px, 20px);
             z-index: 1;
@@ -65,8 +83,8 @@ $input: #220a2f;
     }
 
     & .segurity {
-        position: relative;
-        bottom: 140px;
+        position: absolute;
+        bottom: 120px;
         left: 210px;
 
         & input {
@@ -96,17 +114,16 @@ $input: #220a2f;
 }
 
 #circle {
-    @include layouts.circle(220px, 35px, 60px, 60px);
+    @include layouts.circle(13.75rem, 2.188rem, 3.75rem, 3.75rem);
     background: $white;
 }
 
 #circle2 {
-    @include layouts.circle(263px, 110px, 20px, 20px);
+    @include layouts.circle(16.438rem, 6.875rem, 1.25rem, 1.25rem);
     border: 1px solid $white;
 }
 
 form {
-
     position: absolute;
     top: 325px;
     left: 60%;
@@ -115,7 +132,11 @@ form {
 
     @media (max-width: 1000px) {
         & {
-            @include layouts.card(450px, 100px);
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            margin-left: 10px;
+            left: 10%;
         }
     }
 
@@ -138,7 +159,7 @@ form {
         color: $alert;
     }
 
-    & .alert-in-input{
+    & .alert-in-input {
         color: $alert;
         display: block;
         text-align: center;
@@ -224,22 +245,32 @@ form {
 
 }
 
-.confirm{
+.confirm {
 
     position: absolute;
     left: 60%;
     top: 50%;
     width: 400px;
-    height: 500px;
+    height: 200px;
     display: none;
 
-    & img{
+    @media (max-width: 1000px) {
+        & {
+            margin: 0 auto;
+            position: absolute;
+            top: 70%;
+            margin-left: 10px;
+            left: 10%;
+        }
+    }
+
+    & img {
         position: relative;
         bottom: 120px;
         left: 150px;
     }
 
-    & h1{
+    & h1 {
         position: relative;
         bottom: 90px;
         left: 80px;
@@ -247,16 +278,15 @@ form {
         font-size: 2rem;
     }
 
-    & p{
+    & p {
         color: $grey;
         position: relative;
         bottom: 70px;
         left: 60px;
         letter-spacing: 1.5px
-        
     }
 
-    & button{
+    & button {
         @include components.input-form();
         width: 400px;
         position: relative;
@@ -264,9 +294,6 @@ form {
         color: $white;
         background-color: $input;
         cursor: pointer;
-        
+
     }
-
-
-
 }

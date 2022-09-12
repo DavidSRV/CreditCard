@@ -1,109 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Assets/css/styles.css" />
     <title>Credit-Card</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <section class="card1">
+      <img src="Assets/images/bg-card-front.png" alt="" />
 
-        <img src="Assets/images/bg-card-front.png" alt="">
+      <div id="circle"></div>
 
-        <div id="circle"></div>
+      <div id="circle2"></div>
 
-        <div id="circle2"></div>
+      <div class="cardNum">
+        <input
+          id="cardNum"
+          type="number"
+          placeholder="0000 0000 0000 0000"
+          disabled
+        />
+      </div>
 
-        <div class="cardNum">
-            <input id="cardNum" type="number" placeholder="0000 0000 0000 0000" disabled>
-        </div>
+      <div class="nameUser">
+        <input id="cardUser" type="text" placeholder="FELICIA LEIRE" disabled />
+      </div>
 
-        <div class="nameUser">
-            <input id="cardUser" type="text" placeholder="FELICIA LEIRE" disabled>
-        </div>
-
-        <div class="Date" >
-            <input type="text" placeholder="09/23" disabled>
-        </div>
-
+      <div class="Date">
+        <input type="text" placeholder="09/23" disabled />
+      </div>
     </section>
 
     <section class="card2">
+        <img src="./Assets/images/bg-card-back.png" alt="" />
+      
 
-        <img src="./Assets/images/bg-card-back.png" alt="">
-
-        <div class="segurity">
-
-            <input type="number" name="" id="cardCvc" placeholder="000" disabled>
-
-        </div>
+      <div class="segurity">
+        <input type="number" name="" id="cardCvc" placeholder="000" disabled />
+      </div>
     </section>
 
     <section class="form">
+      <form id="form" action="#">
+        <div class="name">
+          <label for="user">CARDHOLDER NAME</label>
+          <input
+            id="user"
+            type="text"
+            name="user"
+            placeholder="e.g Jane Applessed"
+            maxlength="35"
+            novalid
+          />
+          <span id="alertuser" class="alert"
+            >Only letters and no more than 30 words, Pls Bro!!</span
+          >
+        </div>
 
-        <form id="form" action="#">
+        <div class="formnumcard">
+          <label for="number">CARD NUMBER</label>
+          <input
+            id="number"
+            type="text"
+            name="number"
+            placeholder="e.g. 1234 1234 1234 1234"
+            maxlength="16"
+          />
+          <span id="alertnumber" class="alert">
+            Only numbers. Altogether 16</span
+          >
+        </div>
 
-            <div class="name">
+        <div class="date">
+          <div class="datelabel">
+            <label for="date">EXP, DATE (MM/YY)</label>
 
-                <label for="user">CARDHOLDER NAME</label>
-                <input id="user" type="text" name="user" placeholder="e.g Jane Applessed" maxlength="35" novalid>
-                <span id="alertuser" class="alert">Only letters and no more than 30 words, Pls Bro!!</span>
-            </div>
+            <label for="cvc">CVC</label>
+          </div>
 
-            <div class="formnumcard">
-                <label for="number">CARD NUMBER</label>
-                <input id="number" type="text" name="number" placeholder="e.g. 1234 1234 1234 1234" maxlength="16">
-                <span id="alertnumber" class="alert">
-                    Only numbers. Altogether 16</span>
-            </div>
+          <div class="dateinputs">
+            <input
+              id="date"
+              name="date"
+              type="text"
+              placeholder="MM"
+              minlength="2"
+              maxlength="2"
+            />
 
-            <div class="date">
+            <input
+              id="date1"
+              name="date1"
+              type="text"
+              placeholder="YY"
+              minlength="2"
+              maxlength="2"
+            />
 
-                <div class="datelabel">
-                    <label for="date">EXP, DATE (MM/YY)</label>
+            <input
+              id="cvc"
+              type="text"
+              name="cvc"
+              placeholder="e.g 123"
+              maxlength="3"
+              minlength="3"
+            />
+          </div>
 
-                    <label for="cvc">CVC</label>
-                </div>
+          <div>
+            <span id="alertcvc" class="alert"
+              >Only numbers, month up to 12,days 30 and cvc 3</span
+            >
+          </div>
+        </div>
 
-                <div class="dateinputs">
-
-                    <input id="date" name="date" type="text" placeholder="MM" minlength="2" maxlength="2">
-
-                    <input id="date1" name="date1" type="text" placeholder="YY" minlength="2" maxlength="2">
-
-                    <input id="cvc" type="text" name="cvc" placeholder="e.g 123" maxlength="3" minlength="3">
-                </div>
-
-                <div>
-                    <span id="alertcvc" class="alert">Only numbers, month up to 12,days 30 and cvc 3</span>
-                </div>
-
-            </div>
-
-            <button id="button" class="inputconfirm" type="submit">Confirm</button>
-            <span id="btnconfirm" class="alert">Complete all the fields </span>
-
-        </form>
-
+        <button id="button" class="inputconfirm" type="submit">Confirm</button>
+        <span id="btnconfirm" class="alert">Complete all the fields </span>
+      </form>
     </section>
 
     <section>
-        <div id="confirm1" class="confirm">
-    
-            <img src="./Assets/images/icon-complete.svg" alt="">
-            <h1>THANK YOU!</h1>
-            <P>We've added your card details</P>
-            <button>Continue</button>
-        </div>
-
+      <div id="confirm1" class="confirm">
+        <img src="./Assets/images/icon-complete.svg" alt="" />
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
     </section>
-    
-    <script src="src/controllers/controllers.js"></script>
-</body>
 
+    <script src="src/controllers/controllers.js"></script>
+  </body>
 </html>

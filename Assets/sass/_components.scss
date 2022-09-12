@@ -1,5 +1,5 @@
 @mixin inputs ($bottom, $left, $width:100%, ){
-    position: relative;
+    position: absolute;
     bottom: $bottom;
     left:  $left;
     width: $width;

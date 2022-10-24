@@ -28,13 +28,13 @@ $input: #220a2f;
     & .cardNum {
 
         & input {
-            @include components.inputs(80px, 10px, 85%);
+            @include components.inputs(30px, 10px, 85%);
             width: max-content;
             font-size: 2rem;
             letter-spacing: 2px;
             text-align: end;
 
-            @media (max-width: 1000px) {
+            @media (max-width: 800px) {
                 & {
                     @include components.inputs(80px, 17px, 85%);
                     font-size: 1.2rem;
@@ -45,7 +45,7 @@ $input: #220a2f;
     }
 
     & .nameUser input {
-        @include components.inputs(30px, 40px);
+        @include components.inputs(-20px, 40px);
         font-size: 1rem;
         letter-spacing: 2px;
         background: transparent;
@@ -82,7 +82,7 @@ $input: #220a2f;
 
     }
 
-    @media (max-width: 1270px) {
+    @media (max-width: 800px) {
 
         & img {
             width: 25rem;
@@ -138,11 +138,9 @@ $input: #220a2f;
             }
         }
 
-
-
     }
 
-    @media (max-width: 1450px) {
+    @media (max-width: 1150px) {
         & {
             @include layouts.card(520px, 100px);
 
@@ -162,7 +160,7 @@ $input: #220a2f;
 }
 
 #circle {
-    @include layouts.circle(13.75rem, 2.188rem, 3.75rem, 3.75rem);
+    @include layouts.circle(15.75rem, 2.188rem, 3.75rem, 3.75rem);
     background: $white;
 
     @media (max-width: 1000px) {
@@ -173,7 +171,7 @@ $input: #220a2f;
 }
 
 #circle2 {
-    @include layouts.circle(16.438rem, 6.875rem, 1.25rem, 1.25rem);
+    @include layouts.circle(18.438rem, 6.875rem, 1.25rem, 1.25rem);
     border: 1px solid $white;
 
     @media (max-width: 1000px) {

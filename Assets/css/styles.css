@@ -42,7 +42,7 @@ body {
 }
 .card1 .cardNum input {
   position: absolute;
-  bottom: 80px;
+  bottom: 30px;
   left: 10px;
   width: 85%;
   border-style: none;
@@ -53,7 +53,7 @@ body {
   letter-spacing: 2px;
   text-align: end;
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .card1 .cardNum input {
     position: absolute;
     bottom: 80px;
@@ -68,7 +68,7 @@ body {
 }
 .card1 .nameUser input {
   position: absolute;
-  bottom: 30px;
+  bottom: -20px;
   left: 40px;
   width: 100%;
   border-style: none;
@@ -109,17 +109,17 @@ body {
     font-size: 0.8rem;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 800px) {
   .card1 img {
     width: 25rem;
   }
 }
-@media (max-width: 1270px) and (max-width: 1000px) {
+@media (max-width: 800px) and (max-width: 1000px) {
   .card1 img {
     width: 21rem;
   }
 }
-@media (max-width: 1270px) {
+@media (max-width: 800px) {
   .card1 {
     position: absolute;
     top: 160px;
@@ -127,7 +127,7 @@ body {
     z-index: 1;
   }
 }
-@media (max-width: 1270px) and (min-width: 1000px) {
+@media (max-width: 800px) and (min-width: 1000px) {
   .card1 {
     position: absolute;
     top: 225px;
@@ -163,14 +163,14 @@ body {
     left: 70px;
   }
 }
-@media (max-width: 1450px) {
+@media (max-width: 1150px) {
   .card2 {
     position: absolute;
     top: 520px;
     left: 100px;
   }
 }
-@media (max-width: 1450px) and (max-width: 1000px) {
+@media (max-width: 1150px) and (max-width: 1000px) {
   .card2 {
     position: absolute;
     top: 50px;
@@ -183,7 +183,7 @@ body {
 
 #circle {
   position: relative;
-  bottom: 13.75rem;
+  bottom: 15.75rem;
   left: 2.188rem;
   border-radius: 50%;
   width: 3.75rem;
@@ -203,7 +203,7 @@ body {
 
 #circle2 {
   position: relative;
-  bottom: 16.438rem;
+  bottom: 18.438rem;
   left: 6.875rem;
   border-radius: 50%;
   width: 1.25rem;

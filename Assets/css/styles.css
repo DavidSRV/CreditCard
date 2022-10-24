@@ -29,9 +29,9 @@ body {
 
 .card1 {
   position: absolute;
-  top: 225px;
+  top: 130px;
   left: 250px;
-  height: 250px;
+  height: 200px;
   min-width: 250px;
 }
 .card1 ::placeholder {
@@ -53,17 +53,44 @@ body {
   letter-spacing: 2px;
   text-align: end;
 }
+@media (max-width: 1000px) {
+  .card1 .cardNum input {
+    position: absolute;
+    bottom: 80px;
+    left: 17px;
+    width: 85%;
+    border-style: none;
+    color: white;
+    background-color: transparent;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+}
 .card1 .nameUser input {
   position: absolute;
-  bottom: 170px;
+  bottom: 30px;
   left: 40px;
   width: 100%;
   border-style: none;
   color: white;
   background-color: transparent;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
   background: transparent;
-  width: 1px;
+  width: 300px;
+}
+@media (max-width: 1000px) {
+  .card1 .nameUser input {
+    position: absolute;
+    bottom: 37px;
+    left: 40px;
+    width: 100%;
+    border-style: none;
+    color: white;
+    background-color: transparent;
+    font-size: 0.7rem;
+    width: 200px;
+  }
 }
 .card1 .Date input {
   position: absolute;
@@ -72,11 +99,27 @@ body {
   width: 50px;
   background: transparent;
   border: none;
+  font-size: 1rem;
+}
+@media (max-width: 1000px) {
+  .card1 .Date input {
+    position: absolute;
+    top: 150px;
+    left: 270px;
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 1270px) {
   .card1 img {
     width: 25rem;
   }
+}
+@media (max-width: 1270px) and (max-width: 1000px) {
+  .card1 img {
+    width: 21rem;
+  }
+}
+@media (max-width: 1270px) {
   .card1 {
     position: absolute;
     top: 160px;
@@ -94,7 +137,7 @@ body {
 
 .card2 {
   position: absolute;
-  top: 520px;
+  top: 440px;
   left: 350px;
 }
 .card2 ::placeholder {
@@ -113,6 +156,13 @@ body {
   font-size: 1rem;
   letter-spacing: 2px;
 }
+@media (max-width: 1000px) {
+  .card2 .segurity {
+    position: absolute;
+    bottom: 80px;
+    left: 70px;
+  }
+}
 @media (max-width: 1450px) {
   .card2 {
     position: absolute;
@@ -123,8 +173,11 @@ body {
 @media (max-width: 1450px) and (max-width: 1000px) {
   .card2 {
     position: absolute;
-    top: 22px;
-    left: 100px;
+    top: 50px;
+    left: 80px;
+  }
+  .card2 img {
+    width: 19rem;
   }
 }
 
@@ -137,6 +190,16 @@ body {
   height: 3.75rem;
   background: white;
 }
+@media (max-width: 1000px) {
+  #circle {
+    position: relative;
+    bottom: 10.45rem;
+    left: 2.188rem;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
 
 #circle2 {
   position: relative;
@@ -147,21 +210,31 @@ body {
   height: 1.25rem;
   border: 1px solid white;
 }
+@media (max-width: 1000px) {
+  #circle2 {
+    position: relative;
+    bottom: 12.118rem;
+    left: 5.375rem;
+    border-radius: 50%;
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+}
 
 form {
   position: absolute;
-  top: 325px;
-  left: 60%;
+  top: 235px;
+  left: 1000px;
   width: 400px;
   display: block;
 }
 @media (max-width: 1000px) {
   form {
-    margin: 0 auto;
     position: absolute;
-    top: 50%;
+    top: 400px;
     margin-left: 10px;
-    left: 10%;
+    left: 20px;
+    width: 350px;
   }
 }
 form input:focus {
@@ -247,6 +320,11 @@ form .date input[name=space] {
 form .date input[id=cvc] {
   width: 240px;
 }
+@media (max-width: 1000px) {
+  form .date input[id=cvc] {
+    width: 190px;
+  }
+}
 form .date label {
   position: relative;
 }
@@ -274,9 +352,9 @@ form .inputconfirm {
   .confirm {
     margin: 0 auto;
     position: absolute;
-    top: 70%;
-    margin-left: 10px;
-    left: 10%;
+    top: 60%;
+    left: 3px;
+    width: 350px;
   }
 }
 .confirm img {
@@ -291,12 +369,22 @@ form .inputconfirm {
   letter-spacing: 6px;
   font-size: 2rem;
 }
+@media (max-width: 1000px) {
+  .confirm h1 {
+    width: 240px;
+  }
+}
 .confirm p {
   color: grey;
   position: relative;
   bottom: 70px;
   left: 60px;
   letter-spacing: 1.5px;
+}
+@media (max-width: 1000px) {
+  .confirm p {
+    width: 280px;
+  }
 }
 .confirm button {
   font-size: 1.2rem;
@@ -309,6 +397,12 @@ form .inputconfirm {
   color: white;
   background-color: #220a2f;
   cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .confirm button {
+    width: 300px;
+    left: 50px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

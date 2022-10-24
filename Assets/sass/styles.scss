@@ -12,15 +12,16 @@ $input: #220a2f;
 
 .card1 {
 
-    @include layouts.card(225px, 250px);
-    height: 250px;
+    @include layouts.card(130px, 250px);
+
+    height: 200px;
     min-width: 250px;
 
     & ::placeholder {
         color: $white;
     }
 
-    & img{
+    & img {
         width: 30rem
     }
 
@@ -32,14 +33,32 @@ $input: #220a2f;
             font-size: 2rem;
             letter-spacing: 2px;
             text-align: end;
+
+            @media (max-width: 1000px) {
+                & {
+                    @include components.inputs(80px, 17px, 85%);
+                    font-size: 1.2rem;
+                    letter-spacing: 4px
+                }
+            }
         }
     }
 
     & .nameUser input {
-        @include components.inputs(170px, 40px);
-        font-size: 0.8rem;
+        @include components.inputs(30px, 40px);
+        font-size: 1rem;
+        letter-spacing: 2px;
         background: transparent;
-        width: 1px;
+        width: 300px;
+
+        @media (max-width: 1000px) {
+            & {
+                @include components.inputs(37px, 40px);
+                font-size: 0.7rem;
+                width: 200px;
+            }
+        }
+
 
     }
 
@@ -50,14 +69,29 @@ $input: #220a2f;
         width: 50px;
         background: transparent;
         border: none;
+        font-size: 1rem;
+
+        @media (max-width: 1000px) {
+            & {
+                position: absolute;
+                top: 150px;
+                left: 270px;
+                font-size: 0.8rem;
+            }
+        }
 
     }
 
     @media (max-width: 1270px) {
 
+        & img {
+            width: 25rem;
 
-        & img{
-            width: 25rem
+            @media (max-width: 1000px) {
+                & {
+                    width: 21rem
+                }
+            }
         }
 
         & {
@@ -76,7 +110,7 @@ $input: #220a2f;
 
 .card2 {
 
-    @include layouts.card(520px, 350px);
+    @include layouts.card(440px, 350px);
 
     & ::placeholder {
         color: $white;
@@ -96,6 +130,16 @@ $input: #220a2f;
             letter-spacing: 2px;
         }
 
+        @media (max-width: 1000px) {
+            & {
+                position: absolute;
+                bottom: 80px;
+                left: 70px;
+            }
+        }
+
+
+
     }
 
     @media (max-width: 1450px) {
@@ -104,7 +148,11 @@ $input: #220a2f;
 
             @media (max-width: 1000px) {
                 & {
-                    @include layouts.card(22px, 100px);
+                    @include layouts.card(50px, 80px);
+
+                    & img {
+                        width: 19rem
+                    }
                 }
             }
         }
@@ -116,27 +164,39 @@ $input: #220a2f;
 #circle {
     @include layouts.circle(13.75rem, 2.188rem, 3.75rem, 3.75rem);
     background: $white;
+
+    @media (max-width: 1000px) {
+        & {
+            @include layouts.circle(10.45rem, 2.188rem, 2.25rem, 2.25rem);
+        }
+    }
 }
 
 #circle2 {
     @include layouts.circle(16.438rem, 6.875rem, 1.25rem, 1.25rem);
     border: 1px solid $white;
+
+    @media (max-width: 1000px) {
+        & {
+            @include layouts.circle(12.118rem, 5.375rem, 1.05rem, 1.05rem);
+        }
+    }
 }
 
 form {
     position: absolute;
-    top: 325px;
-    left: 60%;
+    top: 235px;
+    left: 1000px;
     width: 400px;
     display: block;
 
     @media (max-width: 1000px) {
         & {
-            margin: 0 auto;
             position: absolute;
-            top: 50%;
+            top: 400px;
             margin-left: 10px;
-            left: 10%;
+            left: 20px;
+            width: 350px;
         }
     }
 
@@ -223,6 +283,13 @@ form {
 
         & input[id="cvc"] {
             width: 240px;
+
+            @media (max-width: 1000px) {
+                & {
+                    width: 190px;
+                }
+            }
+
         }
 
         & label {
@@ -241,6 +308,8 @@ form {
         font-size: 1rem;
         letter-spacing: 2px;
         cursor: pointer;
+
+        
     }
 
 }
@@ -258,9 +327,9 @@ form {
         & {
             margin: 0 auto;
             position: absolute;
-            top: 70%;
-            margin-left: 10px;
-            left: 10%;
+            top: 60%;
+            left: 3px;
+            width: 350px;
         }
     }
 
@@ -276,6 +345,12 @@ form {
         left: 80px;
         letter-spacing: 6px;
         font-size: 2rem;
+
+        @media (max-width: 1000px) {
+            & {
+                width: 240px;
+            }
+        }
     }
 
     & p {
@@ -283,7 +358,13 @@ form {
         position: relative;
         bottom: 70px;
         left: 60px;
-        letter-spacing: 1.5px
+        letter-spacing: 1.5px;
+
+        @media (max-width: 1000px) {
+            & {
+                width: 280px;
+            }
+        }
     }
 
     & button {
@@ -294,6 +375,14 @@ form {
         color: $white;
         background-color: $input;
         cursor: pointer;
+
+        @media (max-width: 1000px) {
+            & {
+                width: 300px;
+                left: 50px;
+
+            }
+        }
 
     }
 }

@@ -209,12 +209,17 @@ form {
     & .alert {
         @include layouts.alert();
         color: $alert;
-
     }
 
     & .alert-on {
         @include layouts.alert(block);
         color: $alert;
+
+        @media (max-width: 1000px) {
+            & {
+                font-size: 0.9rem
+            }
+        }
     }
 
     & .alert-in-input {
@@ -223,6 +228,7 @@ form {
         text-align: center;
         margin-top: -30px;
         font-size: 1.5rem;
+
     }
 
 

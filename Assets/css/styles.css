@@ -257,6 +257,11 @@ form .alert-on {
   top: 3px;
   color: rgb(225, 42, 48);
 }
+@media (max-width: 1000px) {
+  form .alert-on {
+    font-size: 0.9rem;
+  }
+}
 form .alert-in-input {
   color: rgb(225, 42, 48);
   display: block;
